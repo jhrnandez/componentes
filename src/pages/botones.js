@@ -1,6 +1,6 @@
 import Toastify from "toastify-js";
 
-import Boton from "@/components/boton";
+import Boton from "@/components/Boton";
 const colors = ["primary", "gray", "blue", "cyan", "pink", "green", "red"];
 const sizes = ["small", "medium", "large"];
 
