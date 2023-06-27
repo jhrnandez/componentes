@@ -16,9 +16,10 @@ export default function Botones() {
         fontSize: "1.5rem",
       },
     }).showToast();
-    const classToCopy = e.target.className;
-    let button = `<button class="${classToCopy}">Boton</button>`;
-    navigator.clipboard.writeText(button);
+    const elementString = e.target.outerHTML;
+
+    //copy to clipboard
+    navigator.clipboard.writeText(elementString);
   };
 
   return (
