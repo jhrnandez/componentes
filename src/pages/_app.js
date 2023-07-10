@@ -5,6 +5,10 @@ import Script from "next/script";
 import Layout from "@/components/Layout";
 
 export default function App({ Component, pageProps }) {
+  let DefaultLayout = Layout;
+  if (Component.layout) {
+    DefaultLayout = ({ children }) => <>{children}</>;
+  }
   return (
     <>
       <Script
@@ -24,9 +28,9 @@ export default function App({ Component, pageProps }) {
         `,
         }}
       />
-      <Layout>
+      <DefaultLayout>
         <Component {...pageProps} />
-      </Layout>
+      </DefaultLayout>
     </>
   );
 }

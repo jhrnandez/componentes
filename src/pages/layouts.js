@@ -2,6 +2,7 @@ import Boton from "@/components/Boton";
 import SimpleFlex from "@/components/SimpleFlex";
 import SimpleGrid from "@/components/SimpleGrid";
 import Toastify from "toastify-js";
+import AppLayout from "@/components/AppLayout";
 
 export default function Layouts() {
   const copyClassToClipboard = (id) => {
@@ -61,6 +62,21 @@ export default function Layouts() {
             <div className="h-96 w-3/12 bg-gray-50 border-dashed border"></div>
             <div className="h-96 flex-1 bg-gray-50 border-dashed border"></div>
           </SimpleFlex>
+        </div>
+        <div>
+          <SimpleFlex className="flex justify-between items-center">
+            <h2>App Layout</h2>
+            <Boton
+              onClickEvent={(e) => copyClassToClipboard("app-layout")}
+              color="pink"
+            >
+              Copiar al portapapeles
+            </Boton>
+            <Boton href={`/layouts/app-layout`} color="pink">
+              Ver ejemplo
+            </Boton>
+          </SimpleFlex>
+          <AppLayout>Main</AppLayout>
         </div>
       </div>
     </main>

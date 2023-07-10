@@ -2,6 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/layouts": "pages/layouts.js",
-  "/botones": "pages/botones.js"
+  "/layouts/app-layout": "pages/layouts/app-layout.js"
 }
